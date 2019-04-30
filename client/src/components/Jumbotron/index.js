@@ -5,8 +5,9 @@ import React from "react";
 import "./style.css";
 
 //Jumbotron helper function. Also exports code so that other files can access
-export function Jumbotron({ children }) {
+function Jumbotron({ children }) {
   return <div className="jumbotron mt-4">{children}</div>;
 }
 
-
+//export code so that other files can access
+export default Jumbotron;

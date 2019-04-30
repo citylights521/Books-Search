@@ -2,6 +2,7 @@
 
 //import react (or else it won't work)
 import React from "react";
+import "./style.css";
 
 //Card function for the bootstrap card
 function Card({ icon, title, children }) {

@@ -1,4 +1,6 @@
 /* jumbotron styling */
 .jumbotron {
   padding: 100px;
+  background-image: url(./blur-books-close-up-159866.jpg);
+  background-size: cover;
 }

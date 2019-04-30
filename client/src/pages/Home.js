@@ -1,9 +1,7 @@
 //user landing page. This code presents the Book search and search results
 
-//have to import react (or else it won't work!)
+//have to import react (or else it won't work!) and other files
 import React, { Component } from "react";
-
-//import UI components 
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Form from "../components/Form";
@@ -75,9 +73,9 @@ class Home extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>(React) Google Books Search</strong>
+                <strong>Google Books Search</strong>
               </h1>
-              <h2 className="text-center">Search for and Save Books of Interest.</h2>
+              <h2 className="text-center">Search for and save your favorite books!</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12">
