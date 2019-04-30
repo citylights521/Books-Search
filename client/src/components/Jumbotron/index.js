@@ -1,8 +1,12 @@
+//this code creates the Jumbotron in the user view
+
+//import react (or else it won't work!)
 import React from "react";
 import "./style.css";
 
-function Jumbotron({ children }) {
+//Jumbotron helper function. Also exports code so that other files can access
+export function Jumbotron({ children }) {
   return <div className="jumbotron mt-4">{children}</div>;
 }
 
-export default Jumbotron;
+

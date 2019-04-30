@@ -1,9 +1,18 @@
+//this code allows book HTML/JSX to populate in the user view
+
+//import react (or it won't work)
 import React from "react";
+
+//import custom components (list and grid)
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
+
+//import styling in css file
 import "./style.css";
 
+//Book function to write book list item <li>
 function Book({ title, subtitle, authors, link, description, image, Button }) {
+  //show this information:
   return (
     <ListItem>
       <Row className="flex-wrap-reverse">
@@ -37,4 +46,5 @@ function Book({ title, subtitle, authors, link, description, image, Button }) {
   );
 }
 
+//exports Book file so that other files can use this code
 export default Book;

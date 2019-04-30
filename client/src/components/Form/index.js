@@ -1,5 +1,10 @@
+//this code creates the Form for taking in user input to change the state
+
+// import react (or else it won't work!)
 import React from "react";
 
+//General Form function takes in user input on the front-end
+//Utilizes q for queries, and callbacks for change and submit
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>
@@ -7,17 +12,19 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         <label htmlFor="Query">
           <strong>Book</strong>
         </label>
+{/* user search input field  */}
         <input
           className="form-control"
           id="Title"
           type="text"
           value={q}
-          placeholder="Ready Player One"
+          placeholder="The Nightingale"
           name="q"
           onChange={handleInputChange}
           required
         />
       </div>
+{/* Search button code */}
       <div className="pull-right">
         <button
           onClick={handleFormSubmit}
@@ -31,4 +38,5 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
   );
 }
 
+//export code so that other files can access the above
 export default Form;

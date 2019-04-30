@@ -1,6 +1,12 @@
+//this code is for the google books API call
+
+//brings in axios so that the API call can be made
 const axios = require("axios");
+
+//brings in the models file so that the code can be referenced
 const db = require("../models");
 
+//exports the axios API call to google books
 module.exports = {
   findAll: function(req, res) {
     const { query: params } = req;
@@ -8,6 +14,7 @@ module.exports = {
       .get("https://www.googleapis.com/books/v1/volumes", {
         params
       })
+  //gets book results for those books that have title, info, authors, description, image, and link data
       .then(results =>
         results.data.items.filter(
           result =>
@@ -19,6 +26,7 @@ module.exports = {
             result.volumeInfo.imageLinks.thumbnail
         )
       )
+  //filters out any book results that are already being stored in the db
       .then(apiBooks =>
         db.Book.find().then(dbBooks =>
           apiBooks.filter(apiBook =>
@@ -26,7 +34,9 @@ module.exports = {
           )
         )
       )
+  //renders the book result as a json object
       .then(books => res.json(books))
+  //.catch is used if there is an error, in this case it creates a 422 error
       .catch(err => res.status(422).json(err));
   }
 };

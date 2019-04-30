@@ -1,4 +1,9 @@
+//user landing page. This code presents the Book search and search results
+
+//have to import react (or else it won't work!)
 import React, { Component } from "react";
+
+//import UI components 
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Form from "../components/Form";
@@ -8,6 +13,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 
+//builds the Home component
 class Home extends Component {
   state = {
     books: [],
@@ -15,6 +21,7 @@ class Home extends Component {
     message: "Search For A Book To Begin!"
   };
 
+// event for updating the state when user inputs a book name
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -22,6 +29,7 @@ class Home extends Component {
     });
   };
 
+//inline function to call google books API with query   
   getBooks = () => {
     API.getBooks(this.state.q)
       .then(res =>
@@ -29,6 +37,7 @@ class Home extends Component {
           books: res.data
         })
       )
+//.catch captures errors if there are any and updates the state accordinly
       .catch(() =>
         this.setState({
           books: [],
@@ -37,11 +46,13 @@ class Home extends Component {
       );
   };
 
+// event for updating the state when user clicks submit on the form
   handleFormSubmit = event => {
     event.preventDefault();
     this.getBooks();
   };
 
+//this code saves the book id and book information from the API 
   handleBookSave = id => {
     const book = this.state.books.find(book => book.id === id);
 
@@ -56,6 +67,7 @@ class Home extends Component {
     }).then(() => this.getBooks());
   };
 
+//this code shows the Jumbotron, book search field, input form, book results field, and footer on the UI
   render() {
     return (
       <Container>
@@ -115,4 +127,5 @@ class Home extends Component {
   }
 }
 
+//exports Home code so that other files can access
 export default Home;

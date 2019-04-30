@@ -1,7 +1,13 @@
+//this code creates our 404 error message
+
+//have to import React (or else it won't work!)
 import React from "react";
+
+//import other component files
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 
+//no match function for generating the 404 error message
 function NoMatch() {
   return (
     <Container fluid>
@@ -21,4 +27,5 @@ function NoMatch() {
   );
 }
 
+//exports NoMatch code so that other files can access it
 export default NoMatch;

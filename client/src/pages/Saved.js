@@ -1,4 +1,9 @@
+//this code creates the users saved books page
+
+//have to import React (or else it won't work!)
 import React, { Component } from "react";
+
+//import other component files
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Book from "../components/Book";
@@ -7,15 +12,18 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 
+//Saved class extends Component (aka uses the foundation of the component)
 class Saved extends Component {
   state = {
     books: []
   };
 
+//function override for when the component is mounted to update saved books
   componentDidMount() {
     this.getSavedBooks();
   }
 
+//gets saved book information from the back-end
   getSavedBooks = () => {
     API.getSavedBooks()
       .then(res =>
@@ -23,13 +31,16 @@ class Saved extends Component {
           books: res.data
         })
       )
+  //catches errors if there is one
       .catch(err => console.log(err));
   };
 
+//deletes the saved book based off the book id on the back-end and refreshes saved books
   handleBookDelete = id => {
     API.deleteBook(id).then(res => this.getSavedBooks());
   };
 
+//presents saved book HTML/JSX in the UI including the Jumbotron, saved books list, delete button, and footer
   render() {
     return (
       <Container>
@@ -80,4 +91,5 @@ class Saved extends Component {
   }
 }
 
+//exports Saved code so that other files can reference 
 export default Saved;

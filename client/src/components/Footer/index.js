@@ -1,5 +1,9 @@
+//this code creates the footer in the user view
+
+// import react (or else it won't work!)
 import React from "react";
 
+//Footer function generates a footer in the user view
 function Footer() {
   return (
     <footer>
@@ -11,4 +15,5 @@ function Footer() {
   );
 }
 
+//Export Footer so that other files can reference the code
 export default Footer;
