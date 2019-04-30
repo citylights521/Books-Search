@@ -1,29 +1,39 @@
-# Create React Express App
+# Books Search
+A great way to search for and save your favorite books!
 
-## About This Boilerplate
+## How to Use
+Type in the book title of your choice in the Book field on the landing page and click search. Book results will populate below. From the results section you can either view or save the books. Click view and you will be redirected to the book in google play. Click save and the book is sent to your saved page. In the navbar at the top of the page you can click saved to see your saved books. From the saved page you may either view or delete saved books. Click back on Search or Google Books in the navbar to go back to search for additional titles. 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## GitHub Link
+https://github.com/citylights521/Books-Search
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Heroku/Deployed Link 
+(view in raw Markdown to access)
 
-## Starting the app locally
+https://books--search.herokuapp.com/
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+## Components Used
+* React
+* JavaScript
+* JSX
+* CSS
+* HTML
+* Mongoose
+* MongoDB
+* Express
+* Node
+* Axios
+* Bable
+* Concurrently 
+* Google Books API
+* Pexels 
+* GitHub
+* Markdown
+* Git Bash
+* Heroku
 
-```
-npm install
-```
+## Author
+Claire Gibeau
 
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Feedback
+You encounter modularization at it’s peak in React applications. Utilizing webpack streamlined setting up Books Search. Deploying this React app on Heroku made deployment much cleaner than deploying on GitHub alone as I have done in the past.
