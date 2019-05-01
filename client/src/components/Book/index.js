@@ -1,4 +1,6 @@
-//this code allows book HTML/JSX to populate in the user view
+//this code allows book HTML/JSX to populate 
+//populates in the user view on the front-end (UI)
+
 
 //import react (or it won't work)
 import React from "react";
@@ -12,7 +14,7 @@ import "./style.css";
 
 //Book function to write book list item <li>
 function Book({ title, subtitle, authors, link, description, image, Button }) {
-  //show this information:
+  //show this information about the book on the UI:
   return (
     <ListItem>
       <Row className="flex-wrap-reverse">

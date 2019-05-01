@@ -1,7 +1,12 @@
-//brings in required files, path, and express
+//index.js configures routes on the back-end
+
+//brings in path
 const path = require("path");
+//brings in express
 const router = require("express").Router();
+//brings in required books file
 const bookRoutes = require("./books");
+//brings in required google file
 const googleRoutes = require("./google");
 
 //use books route

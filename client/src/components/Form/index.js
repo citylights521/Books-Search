@@ -1,4 +1,5 @@
 //this code creates the Form for taking in user input to change the state
+//populates in the user view on the front-end (UI)
 
 // import react (or else it won't work!)
 import React from "react";

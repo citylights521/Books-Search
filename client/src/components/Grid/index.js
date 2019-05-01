@@ -1,4 +1,5 @@
 //this code is helper methods for generating bootstrap Grid HTML/JSX
+//populates in the user view on the front-end (UI)
 
 // import react (or else it won't work!)
 import React from "react";

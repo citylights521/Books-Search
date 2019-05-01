@@ -1,10 +1,12 @@
 //this code creates our 404 error message
+//presented on the front-end (UI)
 
 //have to import React (or else it won't work!)
 import React from "react";
 
-//import other component files
+//imports components/Grid file
 import { Col, Row, Container } from "../components/Grid";
+//imports components/Jumbotron file
 import Jumbotron from "../components/Jumbotron";
 
 //no match function for generating the 404 error message

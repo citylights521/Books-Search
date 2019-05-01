@@ -1,6 +1,10 @@
-//brings in api file, path, and express
+//configures API and default routes on the back-end (index.html)
+
+//brings in path
 const path = require("path");
+//brings in express
 const router = require("express").Router();
+//brings in api file
 const apiRoutes = require("./api");
 
 //use API route

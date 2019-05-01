@@ -1,4 +1,5 @@
 //this code creates the navigation bar
+//populates in the user view on the front-end (UI)
 
 //must import react (or else it won't work!)
 import React, { Component } from "react";

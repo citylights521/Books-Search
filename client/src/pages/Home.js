@@ -1,14 +1,23 @@
-//user landing page. This code presents the Book search and search results
+//user landing page. This code presents the Book search and search results 
+//used on the front-end (UI)
 
 //have to import react (or else it won't work!) and other files
 import React, { Component } from "react";
+//imports components/Jumbotron file
 import Jumbotron from "../components/Jumbotron";
+//imports components/Card file
 import Card from "../components/Card";
+//imports components/Form file
 import Form from "../components/Form";
+//imports components/Book file
 import Book from "../components/Book";
+//imports components/Footer file
 import Footer from "../components/Footer";
+//imports utils/API file
 import API from "../utils/API";
+//imports components/Grid file
 import { Col, Row, Container } from "../components/Grid";
+//imports components/List file
 import { List } from "../components/List";
 
 //builds the Home component
@@ -35,7 +44,7 @@ class Home extends Component {
           books: res.data
         })
       )
-//.catch captures errors if there are any and updates the state accordinly
+//.catch captures errors if there are any and updates the state accordingly
       .catch(() =>
         this.setState({
           books: [],

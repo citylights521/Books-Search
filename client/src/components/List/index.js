@@ -1,4 +1,5 @@
 //this code creates the users list view
+//populates in the user view on the front-end (UI)
 
 //have to import react (or else it won't work!)
 import React from "react";

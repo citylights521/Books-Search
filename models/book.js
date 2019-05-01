@@ -1,4 +1,4 @@
-//uses mongoose to create the db book schema
+//uses mongoose to create the db book schema on the back-end
 
 //brings in mongoose (or else it won't work!)
 const mongoose = require("mongoose");
@@ -14,6 +14,7 @@ const bookSchema = new Schema({
   link: { type: String, required: true },
   description: { type: String, required: true },
   image: { type: String, required: true },
+  //unique identifier from the google book API
   googleId: { type: String, required: true, unique: true }
 });
 

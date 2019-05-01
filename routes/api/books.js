@@ -1,4 +1,6 @@
-//API routes to the book controller
+//books.js is back-end API routes for the front-end book operations
+
+//API routes to the book controller for CRUD operations
 const router = require("express").Router();
 const bookController = require("../../controllers/bookController");
 
